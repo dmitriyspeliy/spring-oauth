@@ -1,0 +1,16 @@
+server:
+  port: 9000
+
+spring:
+
+  banner:
+    location: banner.txt
+
+  liquibase:
+    change-log: classpath:liquibase-changelog.xml
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:server}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
